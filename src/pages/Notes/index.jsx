@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { getAllNotes } from 'services/getAllNotes'
 import { deleteSingleNote } from 'services/deleteSingleNote'
 import { createNewNote } from 'services/createNewNote'
+import Login from 'components/Login'
 
 const Notes = () => {
     const [notes, setNotes] = useState([])
@@ -37,17 +38,20 @@ const Notes = () => {
     }
 
     return <>
+        <Login />
         <h2>Lista de notas:</h2>
         <ul>
             {
-                notes.map(note => (
-                    <li key={note.id}>
-                        <p>{note.content}</p>
-                        <p>{note.date}</p>
-                        <button>Change to {note.important ? "not important" : "important"}</button>
-                        <button onClick={handleDeleteNote.bind(this, note.id)}>Borrar</button>
-                    </li>
-                ))
+                typeof notes !== "undefined"
+                    ? notes.map(note => (
+                        <li key={note.id}>
+                            <p>{note.content}</p>
+                            <p>{note.date}</p>
+                            <button>Change to {note.important ? "not important" : "important"}</button>
+                            <button onClick={handleDeleteNote.bind(this, note.id)}>Borrar</button>
+                        </li>
+                    ))
+                    : null
             }
         </ul>
 

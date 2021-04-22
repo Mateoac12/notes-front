@@ -1,17 +1,31 @@
 import './App.css';
-import Header from './components/Header';
+
+import React, { Suspense } from 'react'
 import { Route } from 'wouter'
-import Notes from './pages/Notes';
+
+/* import HomePage from './pages/HomePage' */
+import Header from './components/Header'
+import Notes from './pages/Notes'
+
+const HomePage = React.lazy(() => import('pages/HomePage'))
 
 function App() {
   return (
-    <div className="App">
+    <>
+    <Suspense fallback={<div>Loading</div>}>
       <Header />
-      <Route
-        path = "/"
-        component = { Notes }
-      />
-    </div>
+      <div className="App">
+        <Route
+          component={ HomePage }
+          path="/"
+        />
+        <Route
+          component = { Notes }
+          path = "/notes"
+        />
+      </div>
+    </Suspense>
+    </>
   );
 }
 

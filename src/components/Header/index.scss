@@ -1,0 +1,26 @@
+@import '/src/scss/mixins/index.scss';
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  padding: .5em 0;
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    color: var(--primary);
+  }
+
+  &__logo {
+    max-width: 40px;
+    cursor: pointer;
+  }
+}
+
+.login {
+  &__button {
+    @include button
+  }
+}

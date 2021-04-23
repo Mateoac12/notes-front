@@ -1,0 +1,14 @@
+.loginpage {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__background {
+    max-height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

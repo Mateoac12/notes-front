@@ -6,6 +6,7 @@ import { Route } from 'wouter'
 /* import HomePage from './pages/HomePage' */
 import Header from './components/Header'
 import Notes from './pages/Notes'
+import LoginPage from 'pages/LoginPage';
 
 const HomePage = React.lazy(() => import('pages/HomePage'))
 
@@ -18,6 +19,10 @@ function App() {
         <Route
           component={ HomePage }
           path="/"
+        />
+        <Route
+          component={LoginPage}
+          path="/login"
         />
         <Route
           component = { Notes }

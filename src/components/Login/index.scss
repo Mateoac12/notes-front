@@ -1,0 +1,40 @@
+@import '/src/scss/mixins/index.scss';
+
+.login-form {
+  padding: 50px;
+  border-radius: 8px;
+  border: 1px solid var(--gray-low);
+  box-shadow: 0 0 8px var(--gray-low);
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 300px;
+
+  &__input {
+    margin: .5em;
+    border: 1px solid var(--gray-low);
+    outline: none;
+    padding: .5em;
+    border-radius: 8px;
+
+    &:focus {
+      border: 1px solid var(--primary)
+    }
+  }
+
+  &__button {
+    @include button;
+    margin: 2rem 0 0;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 80px;
+  }
+}

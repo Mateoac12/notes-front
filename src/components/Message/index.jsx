@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Message = ({ message }) => {
+import './index.scss'
+
+const Message = ({ message, type }) => {
   return (
-    <div>
-      <h1 className="message">{message}</h1>
-    </div>
+    <h1 className={`message message__${type}`}>{message}</h1>
   )
 }
 

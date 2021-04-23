@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './index.scss'
+
 const Banner = ({ background, title, subtitle, icon }) => {
   return (
     <section className="banner">

@@ -7,6 +7,9 @@
   --tertiary: #99ddd8;
 
   --gray-low: #f0f0f0;
+  --gray-hight: #cccccc;
+
+  --error: #f7b2b2;
 }
 
 body {

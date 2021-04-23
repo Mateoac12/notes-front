@@ -1,0 +1,11 @@
+.message {
+  margin-top: 1rem;
+  padding: .5rem;
+  font-size: 12px;
+  font-weight: 400;
+
+  &__error {
+    background-color: var(--error);
+    border-radius: 8px;
+  }
+}

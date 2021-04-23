@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { getAllNotes } from 'services/getAllNotes'
 import { deleteSingleNote } from 'services/deleteSingleNote'
 import { createNewNote } from 'services/createNewNote'
-import Login from 'components/Login'
 
 const Notes = () => {
     const [notes, setNotes] = useState([])
@@ -38,7 +37,6 @@ const Notes = () => {
     }
 
     return <>
-        <Login />
         <h2>Lista de notas:</h2>
         <ul>
             {
